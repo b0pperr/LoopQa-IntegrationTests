@@ -22,11 +22,11 @@ test.describe("LoopQA | Demo", () => {
 
 	test("should verify fix navigation bug task is in the 'to do' column and confirm tag: bug", { tag: ["@smoke", "@webapplication"] }, async () => {
 		await webApplicationPage.expect.childToBeDescendantOfParentDiv(webApplicationPage._fixNavigationBugTask, kanbanBoardPage._toDoColumn, "Verifying the Fix Navigation Bug task is within the To Do column.");
-		await webApplicationPage.expect.childToBeDescendantOfParentDiv(kanbanBoardPage._bugTag, webApplicationPage._fixNavigationBugTaskDiv, "Verifying the bug tag exists on the Navigation Bug task.");
+		await webApplicationPage.expect.childToBeDescendantOfParentDiv(kanbanBoardPage._bugTag, webApplicationPage._fixNavigationBugTaskDiv, "Verifying the bug tag exists on the Fix Navigation Bug task.");
 	});
 
 	test("should verify design system updates task is in the 'in progress' column and confirm tag: design", { tag: ["@smoke", "@webapplication"] }, async () => {
-		await webApplicationPage.expect.childToBeDescendantOfParentDiv(webApplicationPage._designSytemUpdatesTask, kanbanBoardPage._inProgressColumn, "Verifying the Fix Navigation Bug task is within the To Do column.");
-		await webApplicationPage.expect.childToBeDescendantOfParentDiv(kanbanBoardPage._designTag, webApplicationPage._designSytemUpdatesTaskDiv, "Verifying the bug tag exists on the Navigation Bug task.");
+		await webApplicationPage.expect.childToBeDescendantOfParentDiv(webApplicationPage._designSytemUpdatesTask, kanbanBoardPage._inProgressColumn, "Verifying the Design System Updates task is within the In Progress column.");
+		await webApplicationPage.expect.childToBeDescendantOfParentDiv(kanbanBoardPage._designTag, webApplicationPage._designSytemUpdatesTaskDiv, "Verifying the design tag exists on the Design System Updates task.");
 	});
 });

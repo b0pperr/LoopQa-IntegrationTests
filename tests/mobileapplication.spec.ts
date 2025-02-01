@@ -16,8 +16,8 @@ test.describe("LoopQA | Demo", () => {
 	});
 
 	test("should verify push notification system task is in the 'to do' column and confirm tag: feature", { tag: ["@smoke", "@mobileapplication"] }, async () => {
-		await mobileApplicationPage.expect.childToBeDescendantOfParentDiv(mobileApplicationPage._pushNotificationSystemTask, kanbanBoardPage._toDoColumn, "Verifying the Implement User Task is within the To Do column.");
-		await mobileApplicationPage.expect.childToBeDescendantOfParentDiv(kanbanBoardPage._featureTag, mobileApplicationPage._pushNotificationSystemTaskDiv, "Verifying the feature tag exists on the Implement User Auth task.");
+		await mobileApplicationPage.expect.childToBeDescendantOfParentDiv(mobileApplicationPage._pushNotificationSystemTask, kanbanBoardPage._toDoColumn, "Verifying the Push Notification System Task is within the To Do column.");
+		await mobileApplicationPage.expect.childToBeDescendantOfParentDiv(kanbanBoardPage._featureTag, mobileApplicationPage._pushNotificationSystemTaskDiv, "Verifying the feature tag exists on the Push Notification System task.");
 	});
 
 	test("should verify offline mode task is in the 'in progress' column and confirm tags: feature - high priority", { tag: ["@smoke", "@mobileapplication"] }, async () => {
